@@ -1,0 +1,578 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#main-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+@media screen and (min-width: 430px) {
+    .container {
+        width: 430px !important;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+        width: 540px !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 670px !important;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 960px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1140px !important;
+    }
+}
+
+/***********************************HEADER***********************************************/
+
+#header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+header a {
+    color: rgb(185, 180, 180);
+}
+
+header a:hover {
+    color: gray;
+}
+
+header a:first-of-type {
+    color: gray;
+}
+
+#header-logo {
+    font-size: 0.45rem;
+    padding: 8px;
+    background-color: rgb(53, 209, 149);
+    font-weight: 700;
+}
+
+#logo {
+    font-size: 0.9rem;
+}    
+
+#menu-image > img {
+    width: 12px;
+}
+
+#menu {
+    font-size: 0.8rem;
+}
+
+#menu-image > span {
+    font-weight: 600;
+}
+
+@media screen and (min-width: 320px) {
+    #header-logo {
+        font-size: 0.65rem;
+        padding: 12px;
+    }
+    #menu-image > img {
+        width: 14px;
+    }
+    #logo {
+        font-size: 1.4rem;
+    }
+    #menu {
+        font-size: 1rem;
+    }    
+}    
+
+@media screen and (min-width: 360px) {
+    #header-logo {
+        font-size: 0.75rem;
+        padding: 12px;
+    }
+    #menu-image > img {
+        width: 14px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    #header-logo {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+    #logo {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #header-logo {
+        font-size: 0.9rem;
+        padding: 14px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #logo {
+        font-size: 1.7rem;
+    }
+    #header-logo {
+        font-size: 0.9rem;
+        padding: 10px;
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #logo {
+        font-size: 1.9rem;
+    }
+    #header-logo {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #logo {
+        font-size: 2.1rem;
+    }
+    #header-logo {
+        font-size: 1.1rem;
+        padding: 12px;
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #header-logo {
+        font-size: 1.3rem;        
+        padding: 15px;
+    }
+    #logo {
+        font-size: 2.3rem;
+    }
+}    
+
+#header-logo-row {
+    padding-top: 48px;
+}
+
+
+
+
+/***********************************************HERO SECTION****************************************/
+
+#hero-section{
+    background-image: url(../imgs/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 100vh;
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: white;
+    height: 65px;
+}
+
+#hero-section::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    height: 65px;
+}
+
+
+/***************************************************MEDIA QUERIES*************************************/
+
+/*    Jio Phone 2    320/240     */
+@media screen and (min-height: 240px) {
+    #header {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (min-height: 320px) and (orientation: portrait){
+    #hero-section {
+        height: 60vh;
+    }
+    #header {
+        padding-top: 30px;
+    }
+    #header-logo-row {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (min-height: 320px)  and (min-width: 450px){
+    #header {
+        padding-top: 30px;
+    }  
+    #first-row {
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (min-height: 320px)  and (min-width: 500px){
+    #header {
+        padding-top: 20px;
+    }  
+}
+
+@media screen and (min-height: 320px) and (min-width: 560px) {
+    #header {
+        padding-top: 10px;
+    }    
+}
+
+@media screen and (min-height: 335px) {
+    #header {
+        padding-top: 0;
+    }    
+    #header-logo-row {
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-height: 375px) {
+    #header {
+        padding-top: 10px;
+    }    
+}
+
+@media screen and (min-height: 375px) and (min-width: 800px) {
+    #header {
+        padding-top: 0px;
+    }    
+}
+
+@media screen and (min-height: 400px) {
+    #header-logo-row {
+        padding-top: 10px;
+    }
+}
+
+/*   Nokia N9   480/854   */
+@media screen and (min-height: 480px) and (min-width: 800px) {
+    #header {
+        padding-top: 30px;
+    }
+    #header-logo-row {
+        padding-top: 0px;
+    }
+}
+
+@media screen and (min-height: 480px) and (orientation: portrait) {
+    #hero-section {
+        height: 50vh;
+    }
+    #header {
+        padding-top: 20px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+}
+
+@media screen and (min-height: 500px)  {
+    #header {
+        padding-top: 30px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+}
+
+@media screen and (min-height: 550px)  {
+    #header {
+        padding-top: 40px;
+    }
+    #header-logo-row {
+        padding-top: 30px;
+    }
+}
+
+@media screen and (min-height: 560px) and (orientation: portrait) {
+    #hero-section {
+        height: 40vh;
+    }
+    #header {
+        padding-top: 20px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+
+}
+
+@media screen and (min-height: 600px) and (min-width: 900px) {
+    #header {
+        padding-top: 50px;
+    }
+    #header-logo-row {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (min-height: 600px) and (min-width: 1000px) {
+    #header {
+        padding-top: 30px;
+    }
+    #header-logo-row {
+        padding-top: 40px;
+    }
+}
+
+@media screen and (min-height: 700px)  {
+    #header {
+        padding-top: 20px;
+    }
+    #first-row {
+        padding-bottom: 20px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+}
+
+@media screen and (min-height: 750px)  {
+    #header {
+        padding-top: 120px;
+    }
+}
+
+@media screen and (min-height: 800px)  {
+    #header {
+        padding-top: 30px;
+    }
+    #first-row {
+        padding: 10px 0;
+    }
+}
+
+@media screen and (min-height: 800px)and (min-width: 1000px) {
+    #header {
+        padding-top: 70px;
+    }
+}
+
+@media screen and (min-height: 900px)  {
+    #header {
+        padding-top: 170px;
+    }
+}
+
+/* Laptop with HiDPI screen 1440/900   */
+@media screen and (min-height: 900px) and (min-width: 1400px) {
+    #header {
+        padding-top: 120px;
+    }
+}
+
+/*    Nexus 7   600/960    */
+@media screen and (min-height: 950px) {
+    #header {
+        padding-top: 30px;
+    }
+    #header-logo-row {
+        padding-top: 0px;
+    }
+}
+
+/* Laptop with touch   1280/950  */
+@media screen and (min-height: 950px) and (min-width: 700px){
+    #header {
+        padding-top: 140px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+}
+
+/*   Blackberry PlayBook   600/1024   */
+@media screen and (min-height: 1000px) and (orientation: portrait)  {
+    #hero-section {
+        height: 50vh;
+    }
+    #header {
+        padding-top: 70px;
+    }
+    #header-logo-row {
+        padding-top: 20px;
+    }
+}
+
+/*   iPad  768/1024   */
+@media screen and (min-height: 1000px)  and (min-width: 750px) {
+    #header {
+        padding-top: 50px;
+    }
+    #header-logo-row {
+        padding-top: 10px;
+    }
+}
+
+/*    iPad Pro 1024/1366      */
+@media screen and (min-height: 1000px)  and (min-width: 1300px) {
+    #header {
+        padding-top: 180px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+}
+
+@media screen and (min-height: 1000px) and (min-width: 1600px) {
+    #header {
+        padding-top: 200px;
+    }
+}
+
+@media screen and (min-height: 1000px) and (min-width: 1800px) {
+    #header {
+        padding-top: 210px;
+    }
+}
+
+/*    Nexus 10 800/1280      */
+@media screen and (min-height: 1200px)  {
+    #header {
+        padding-top: 100px;
+    }
+    #header-logo-row {
+        padding-top: 20px;
+    }
+}
+
+/*    iPad Pro 1024/1366      */
+@media screen and (min-height: 1300px) {
+    #header {
+        padding-top: 70px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+}
+
+/*    desktop  2560/1440        */
+@media screen and (min-height: 1400px)  {
+    #header {
+        padding-top: 390px;
+    }
+    #header-logo-row {
+        padding-top: 48px;
+    }
+}
+
+/***********************************************INTRO SECTION****************************************/
+
+#intro-section {
+    padding-bottom: 20px;
+}
+
+.icon {
+    width: 34px;
+    height: 34px;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+    
+@media screen and (min-width: 320px) {
+    .icon {
+        width: 44px;
+        height: 44px;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .icon {
+        width: 54px;
+        height: 54px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .icon {
+        width: 64px;
+        height: 64px;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+}
+/***********************************************ABOUT SECTION****************************************/
+
+#about-section h5 {
+    border-bottom: 1px solid gray;
+}
+
+/***********************************************BLOG SECTION****************************************/
+
+#blog-section h5 {
+    border-bottom: 1px solid gray;
+}
+
+/***********************************************INFO SECTION****************************************/
+
+#info-section {
+    background-color: rgb(34, 33, 33);    
+    color: rgb(173, 169, 169);
+
+}
+
+#my-website p {
+    line-height: 25px;
+}
+
+#recent-posts  p  {
+    border-bottom: 1px solid gray;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+#recent-posts  h6  {
+    border-bottom: 1px solid gray;
+}
+
+#recent-work  p {
+    border-bottom: 1px solid gray;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+#recent-work  h6 {
+    border-bottom: 1px solid gray;
+}
+
+/***********************************************FOOTER SECTION****************************************/
+
+#footer-section {
+    background-color: #110f0ffd;
+    color: rgb(173, 169, 169);
+}
