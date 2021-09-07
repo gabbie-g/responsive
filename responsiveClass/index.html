@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Design - Pefki</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="slike/umbrella.png" type="icon/png">
+    <style>
+        .row {
+            width: 90%;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .row::after {
+            content: "";
+            display: block;
+            clear: left;
+        }
+
+        .column {
+            float: left;
+            width: 16.66%;
+            box-sizing: border-box;
+            padding: 8px;
+        }
+
+        .box {
+            height: 144px;
+            background-image: url("slike/pefki-414w.jpg");
+            background-position: center;
+            background-size: cover;
+            background-origin: content-box;
+            background-clip: content-box;
+            background-repeat: no-repeat;
+            background-color: #914e67;
+        }
+
+
+        @media screen and (max-width: 1024px) {
+            .column {
+                width: 33.3%;
+            }
+            .box {
+                background-image: url("slike/pefki-414w.jpg");
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .column {
+                width: 50%;
+            }
+            .box {
+                background-image: url("slike/pefki-414w.jpg");
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            .column {
+                width: 100%;
+            }
+            .box { 
+            background-image: url("slike/pefki-414w.jpg");
+            }
+        }
+
+        .image {
+            width: 90%;
+            max-width: 960px;
+            box-sizing: border-box;
+            padding: 8px;
+            margin: auto;
+        }
+
+        #hero {
+            height: 70vh;
+            background-image: url("slike/pefki-2048w.jpg");
+            background-position: center;
+            background-size: cover;
+            background-origin: content-box;
+            background-clip: content-box;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #hero {
+                background-image: url("slike/pefki-1024w.jpg");
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #hero {
+                background-image: url("slike/pefki-768w.jpg");
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            #hero {
+                background-image: url("slike/pefki-414w.jpg");
+            }
+        }
+
+        @media only screen and (min-resolution: 2dppx){
+            #hero { 
+            background-image: url("slike/pefki414w@2.png");
+            }
+        }
+
+        @media only screen and (min-resolution: 3dppx){
+            #hero { 
+            background-image: url("slike/pefki-414w@3.png");
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="row">
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+        <div class="column">
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <div class="image">
+        <picture>
+            <source srcset="slike/pefki-414w@3.png" media="(max-width: 414px) and (min-resolution: 3dppx)">
+            <source srcset="slike/pefki-414w@2.png" media="(max-width: 414px) and (min-resolution: 2dppx)">
+            <source srcset="slike/pefki-414w.jpg" media="(max-width: 414px)">
+            <source srcset="slike/pefki-768w.jpg" media="(max-width: 768px)">
+            <source srcset="slike/pefki-1024w.jpg" media="(max-width: 1024px)">
+            <source srcset="slike/pefki-2048w.jpg" media="(max-width: 2048px)">
+            <img src="slike/pefki-1024w.jpg" >
+        </picture>
+    </div>
+
+    <div id="hero" class="image"></div>
+
+
+    <div class="image">
+        <img srcset="slike/pefki-414w.jpg 414w,
+            slike/pefki-768w.jpg 768w,
+            slike/pefki-1024w.jpg 1024w,
+            slike/pefki-2048w.jpg 2048w"
+            sizes="(max-width:414px) 414px,
+            (max-width:768px) 768px,
+            (max-width:1024px) 1024px,
+            1180px"
+            src="slike/pefki-1024w.jpg" alt="Pefki">
+    </div>
+
+    <div class="image">
+        <img srcset="slike/pefki-414w.jpg,
+            slike/pefki-414w@2.jpg 2x,
+            slike/pefki-414w@3.jpg 3x"
+            src="slike/pefki-1024w.jpg" alt="Pefki">
+    </div>
+
+
+</body>
+</html>
