@@ -99,15 +99,15 @@
             }
         }
 
-        @media only screen and (min-resolution: 2dppx){
+        @media only screen and (max-width: 414px) and (min-resolution: 2dppx){
             #hero { 
-            background-image: url("slike/pefki414w@2.png");
+            background-image: url("slike/pefki-414w@2.jpg");
             }
         }
 
-        @media only screen and (min-resolution: 3dppx){
+        @media only screen and (max-width: 414px) and (min-resolution: 3dppx){
             #hero { 
-            background-image: url("slike/pefki-414w@3.png");
+            background-image: url("slike/pefki-414w@3.jpg");
             }
         }
 
@@ -139,11 +139,11 @@
             <div class="box"></div>
         </div>
     </div>
-
+    <p>picture element</p>
     <div class="image">
         <picture>
-            <source srcset="slike/pefki-414w@3.png" media="(max-width: 414px) and (min-resolution: 3dppx)">
-            <source srcset="slike/pefki-414w@2.png" media="(max-width: 414px) and (min-resolution: 2dppx)">
+            <source srcset="slike/pefki-414w@3.jpg" media="(max-width: 414px) and (min-resolution: 3dppx)">
+            <source srcset="slike/pefki-414w@2.jpg" media="(max-width: 414px) and (min-resolution: 2dppx)">
             <source srcset="slike/pefki-414w.jpg" media="(max-width: 414px)">
             <source srcset="slike/pefki-768w.jpg" media="(max-width: 768px)">
             <source srcset="slike/pefki-1024w.jpg" media="(max-width: 1024px)">
@@ -151,10 +151,10 @@
             <img src="slike/pefki-1024w.jpg" >
         </picture>
     </div>
-
+    <p>background image</p>
     <div id="hero" class="image"></div>
 
-
+    <p>image srcset</p>
     <div class="image">
         <img srcset="slike/pefki-414w.jpg 414w,
             slike/pefki-768w.jpg 768w,
@@ -166,7 +166,7 @@
             1180px"
             src="slike/pefki-1024w.jpg" alt="Pefki">
     </div>
-
+    <p>image srcset resolution</p>
     <div class="image">
         <img srcset="slike/pefki-414w.jpg,
             slike/pefki-414w@2.jpg 2x,
