@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Gabriela Gradinaru">
+        <title>Quiz(json)</title>
+        <style>
+            :root{
+                font-size: 14px
+            }
+
+            body {
+                border: none;
+                width: 80%;
+                max-width: 800px;
+                margin: 50px auto;
+                text-align: justify;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            @media (min-width: 414px){
+                :root{
+                    font-size: 16px;
+                }
+            }
+            @media (min-width: 768px){
+                :root{
+                    font-size: 18px;
+                }
+                body{
+                    margin: 80px auto;
+                }
+            }
+            @media (min-width: 992px){
+                :root{
+                    font-size: 22px;
+                }
+            }
+            @media (min-width: 1200px){
+                :root{
+                    font-size: 24px;
+                }
+                body{
+                    margin: 120px auto;
+                }
+            }
+
+            h1{
+                font-size: 1.4rem;
+                padding-top: 15px;
+            }
+            div {
+                margin: 4px 0px;
+                padding: 10px 20px;
+            }
+
+            #button{
+                padding: 10px 16px;
+                background-color: rgb(80, 144, 170);
+                border: none;
+                border-radius: 6px;
+                margin-top: 40px;
+                font-size: 1.2rem;
+                color: white;
+                position: relative;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            #button:focus{
+                outline: none;
+            }
+
+            .red{
+                border: 2px solid red;
+                border-radius: 6px;
+            }
+
+            .blue{
+                border: 2px solid rgb(93, 169, 199);
+                border-radius: 6px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <script>
+
+            (async () => {
+
+            try{
+
+                let response = await fetch('quiz.json');
+
+                if(!response.ok){
+                    throw Error("Error while reading file.");
+                }
+
+                let data = await response.json();
+                //console.log(data);
+
+                var quizLength = Object.keys(data.quiz).length;
+                console.log(quizLength);
+
+                var quizKeys = Object.keys(data.quiz);
+                console.log(quizKeys);
+
+                var quizArray = Object.values(data.quiz);
+                console.log(quizArray);
+
+                var answers = [];    
+/*
+                for (let i = 0; i < quizLength; i++) {
+
+                    document.body.innerHTML += '<form>' + '<h1>Question ' + (i + 1) + ': ' +  quizArray[i].question  + '</h1>' +
+                        '<div data-id="' + quizArray[i].options[0] +'">' + '<input type="radio" name="' + quizKeys[i] + '" id="' + quizArray[i].options[0] + '" value="' + quizArray[i].options[0] + '">' + '<label for="' + quizArray[i].options[0] + '">' + quizArray[i].options[0] + '</label>' + '</div>' +
+                        '<div data-id="' + quizArray[i].options[1] +'">' + '<input type="radio" name="' + quizKeys[i] + '" id="' + quizArray[i].options[1] + '" value="' + quizArray[i].options[1] + '">' + '<label for="' + quizArray[i].options[1] + '">' + quizArray[i].options[1] + '</label>' + '</div>' +
+                        '<div data-id="' + quizArray[i].options[2] +'">' + '<input type="radio" name="' + quizKeys[i] + '" id="' + quizArray[i].options[2] + '" value="' + quizArray[i].options[2] + '">' + '<label for="' + quizArray[i].options[2] + '">' + quizArray[i].options[2] + '</label>' + '</div>' +
+                        '<div data-id="' + quizArray[i].options[3] +'">' + '<input type="radio" name="' + quizKeys[i] + '" id="' + quizArray[i].options[3] + '" value="' + quizArray[i].options[3] + '">' + '<label for="' + quizArray[i].options[3] + '">' + quizArray[i].options[3] + '</label>' + '</div>' +
+                        '</form>';
+
+                    let answer = quizArray[i].answer;
+                    //console.log(answer);
+                    answers.push(answer);
+                    //console.log(answers);
+
+                }
+*/
+                document.body.innerHTML = `<form>`;
+                document.body.innerHTML += `</form>`;
+
+
+                for(let i=0; i < quizLength; i++){
+
+                    document.forms[0].innerHTML += `
+                        <h1>Question ${i+1}: ${quizArray[i].question}</h1>
+                        <div data-id="${quizArray[i].options[0]}">
+                            <input type="radio" name=${quizKeys[i]} id="${quizArray[i].options[0]}" value="${quizArray[i].options[0]}">
+                            <label for="${quizArray[i].options[0]}">${quizArray[i].options[0]}</label>
+                        </div>
+                        <div data-id="${quizArray[i].options[1]}">
+                            <input type="radio" name=${quizKeys[i]} id="${quizArray[i].options[1]}" value="${quizArray[i].options[1]}">
+                            <label for="${quizArray[i].options[1]}">${quizArray[i].options[1]}</label>
+                        </div>
+                        <div data-id="${quizArray[i].options[2]}">
+                            <input type="radio" name=${quizKeys[i]} id="${quizArray[i].options[2]}" value="${quizArray[i].options[2]}">
+                            <label for="${quizArray[i].options[2]}">${quizArray[i].options[2]}</label>
+                        </div>
+                        <div data-id="${quizArray[i].options[3]}">
+                            <input type="radio" name=${quizKeys[i]} id="${quizArray[i].options[3]}" value="${quizArray[i].options[3]}">
+                            <label for="${quizArray[i].options[3]}">${quizArray[i].options[3]}</label>
+                        </div>
+                    `
+                    let answer = quizArray[i].answer;
+                    //console.log(answer);
+                    answers.push(answer);
+                    //console.log(answers);
+
+                }
+
+                document.body.innerHTML += `<button id='button'>Check out your answers!</button>`;
+                console.log(answers);
+
+                let buttons = document.getElementsByTagName("input");
+                //console.log(buttons.length);
+                console.log(buttons);
+
+                for (let j = 0; j < buttons.length; j++) {
+
+                    buttons[j].onclick = function(){
+                        sessionStorage.setItem(buttons[j].name, buttons[j].value);
+                    }
+
+                    for (let value  of Object.values(sessionStorage)) {
+
+                        if(buttons[j].value == value){
+                            buttons[j].setAttribute('checked', 'checked');
+                        }
+
+                    };
+                    //console.log(buttons[j]);   
+
+                }
+
+                console.log(Object.values(sessionStorage));
+
+                let containers = document.getElementsByTagName("div");
+
+                console.log(containers);
+                let button = document.getElementById("button");
+                button.onclick = function(){
+                    for(let i=0; i<answers.length; i++){
+                        for(let j =0; j< containers.length; j++){
+
+                            //console.log(answers[i]); 
+                            //console.log(containers[j]);
+                            for (let value  of Object.values(sessionStorage)) {
+                                //console.log(containers[j].id);
+                                if(containers[j].dataset.id == value){
+                                    containers[j].classList.add("red");
+                                } else if (answers[i] == containers[j].dataset.id){
+                                   /*() if(containers[j].classList.contains("red")){
+                                        containers[j].classList.remove("red");
+                                    }   */                                     
+                                    containers[j].classList.add("blue");
+
+                                }
+                            }
+                        }         
+                    }
+                };
+
+
+            } catch(error) {
+                console.log("Fetch problem: " + error.message);
+            }
+
+            })()
+
+
+        </script>
+    </body>
+
+</html>
